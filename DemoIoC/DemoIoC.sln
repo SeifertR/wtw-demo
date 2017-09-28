@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoIoC", "DemoIoC\DemoIoC.csproj", "{FEC3287F-2C47-4CCD-B681-AA9E4F913D46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoIoC.UnitTests", "DemoIoC.UnitTests\DemoIoC.UnitTests.csproj", "{FCFE0788-3E18-4AAA-A03B-027E58AD31E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEC3287F-2C47-4CCD-B681-AA9E4F913D46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEC3287F-2C47-4CCD-B681-AA9E4F913D46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEC3287F-2C47-4CCD-B681-AA9E4F913D46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEC3287F-2C47-4CCD-B681-AA9E4F913D46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCFE0788-3E18-4AAA-A03B-027E58AD31E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCFE0788-3E18-4AAA-A03B-027E58AD31E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCFE0788-3E18-4AAA-A03B-027E58AD31E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCFE0788-3E18-4AAA-A03B-027E58AD31E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E7F5470-AE8C-438F-88A9-7CC5813F0AB1}
+	EndGlobalSection
+EndGlobal
