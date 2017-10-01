@@ -4,7 +4,7 @@
 
 wtw-demo is a sample code project for WTW that contains a very simple implementation of an IoC container. The solution contains three projects:
 
-* DemoIoC - The project containing the IoC implementaion.
+* DemoIoC - The project containing the IoC implementation.
 * DemoIoC.UnitTests - xUnit tests for the DemoIoC project.
 * DemoIoC.ConsoleApp - A simple console application that verifies that the container is working as intended.
 
