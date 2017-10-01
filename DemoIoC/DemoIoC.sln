@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoIoC", "DemoIoC\DemoIoC.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoIoC.UnitTests", "DemoIoC.UnitTests\DemoIoC.UnitTests.csproj", "{FCFE0788-3E18-4AAA-A03B-027E58AD31E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoIoC.ConsoleApp", "DemoIoC.ConsoleApp\DemoIoC.ConsoleApp.csproj", "{DC5B0F38-71F9-4206-8DBC-DBD5F5B19F24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FCFE0788-3E18-4AAA-A03B-027E58AD31E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCFE0788-3E18-4AAA-A03B-027E58AD31E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCFE0788-3E18-4AAA-A03B-027E58AD31E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC5B0F38-71F9-4206-8DBC-DBD5F5B19F24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC5B0F38-71F9-4206-8DBC-DBD5F5B19F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC5B0F38-71F9-4206-8DBC-DBD5F5B19F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC5B0F38-71F9-4206-8DBC-DBD5F5B19F24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
