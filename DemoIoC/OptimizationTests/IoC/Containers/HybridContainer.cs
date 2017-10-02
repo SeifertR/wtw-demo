@@ -1,13 +1,15 @@
-﻿using DemoIoC.Exceptions;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using OptimizationTests.IoC.RegisteredTypes;
 
-namespace DemoIoC
+namespace OptimizationTests.IoC.Containers
 {
-    public class Container
+    public class HybridContainer
     {
-        private readonly Dictionary<Type, RegisteredType> objectMap = new Dictionary<Type, RegisteredType>();
+        private readonly Dictionary<Type, HybridRegisteredType> objectMap = new Dictionary<Type, HybridRegisteredType>();
         private readonly object locker = new object();
 
         /// <summary>
@@ -19,22 +21,17 @@ namespace DemoIoC
         /// <param name="lifeCycle">Indicates whether the instance of TConcrete should
         /// be unique (Transient) or shared (Singleton).</param>
         public void Register<TResolved, TConcrete>(LifeCycle lifeCycle = LifeCycle.Transient)
-            where TResolved : class
-            where TConcrete : TResolved
         {
             // Simple lock to prevent multiple threads from registering types
             // at the same time.
             lock (locker)
             {
                 var resolvedType = typeof(TResolved);
-                var concreteType = typeof(TConcrete);
 
                 if (objectMap.ContainsKey(resolvedType))
                     throw new TypeAlreadyRegisteredException($"{resolvedType.FullName} has already been registered.");
 
-                var ctor = concreteType.GetConstructors().First();
-                var ctorParams = ctor.GetParameters();
-                var registeredType = new RegisteredType(typeof(TConcrete), lifeCycle, ctor, ctorParams);
+                var registeredType = new HybridRegisteredType(typeof(TConcrete), lifeCycle);
                 objectMap.Add(resolvedType, registeredType);
             }
         }
@@ -61,16 +58,19 @@ namespace DemoIoC
             if (registeredType.Instance != null)
                 return registeredType.Instance;
 
+            // Get the requested type's constructor and see if it requires parameters
+            var ctor = registeredType.ConcreteType.GetConstructors().First();
+            var ctorParameters = ctor.GetParameters();
+
             // If no parameters are needed, create the requested object and return it
-            if (registeredType.CtorParams.Length == 0)
-                return registeredType.CreateInstance();
+            if (ctorParameters.Length == 0)
+                return registeredType.CreateInstance(ctor);
 
             // Get a list of the required parameters, recurssing as needed
-            IList<object> parameters = registeredType.CtorParams
-                .Select(paramToResolve => Resolve(paramToResolve.ParameterType)).ToList();
+            IList<object> parameters = ctorParameters.Select(paramToResolve => Resolve(paramToResolve.ParameterType)).ToList();
 
             // Return the requested type
-            return registeredType.CreateInstance(parameters.ToArray());
+            return registeredType.CreateInstance(ctor, parameters.ToArray());
         }
     }
 }

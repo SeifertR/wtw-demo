@@ -1,0 +1,118 @@
+﻿Ready. Press any key to begin...
+
+Create Default
+Run time: 19 ms
+Run time: 10 ms
+Run time: 10 ms
+Run time: 9 ms
+Run time: 9 ms
+Run time: 9 ms
+Run time: 9 ms
+Run time: 9 ms
+Run time: 9 ms
+Run time: 9 ms
+Create Parameterized
+Run time: 56 ms
+Run time: 55 ms
+Run time: 71 ms
+Run time: 78 ms
+Run time: 82 ms
+Run time: 77 ms
+Run time: 56 ms
+Run time: 56 ms
+Run time: 56 ms
+Run time: 83 ms
+Create Person
+Run time: 138 ms
+Run time: 106 ms
+Run time: 95 ms
+Run time: 84 ms
+Run time: 131 ms
+Run time: 84 ms
+Run time: 95 ms
+Run time: 84 ms
+Run time: 84 ms
+Run time: 83 ms
+
+Invoke Default
+Run time: 7 ms
+Run time: 5 ms
+Run time: 5 ms
+Run time: 5 ms
+Run time: 5 ms
+Run time: 5 ms
+Run time: 5 ms
+Run time: 5 ms
+Run time: 5 ms
+Run time: 5 ms
+Invoke Parameterized
+Run time: 31 ms
+Run time: 32 ms
+Run time: 31 ms
+Run time: 31 ms
+Run time: 31 ms
+Run time: 31 ms
+Run time: 31 ms
+Run time: 48 ms
+Run time: 55 ms
+Run time: 41 ms
+Invoke Person
+Run time: 77 ms
+Run time: 66 ms
+Run time: 65 ms
+Run time: 73 ms
+Run time: 79 ms
+Run time: 71 ms
+Run time: 47 ms
+Run time: 68 ms
+Run time: 69 ms
+Run time: 70 ms
+
+Cached Default
+Run time: 15 ms
+Run time: 6 ms
+Run time: 3 ms
+Run time: 3 ms
+Run time: 3 ms
+Run time: 4 ms
+Run time: 4 ms
+Run time: 4 ms
+Run time: 4 ms
+Run time: 3 ms
+Cached Parameterized
+Run time: 24 ms
+Run time: 23 ms
+Run time: 22 ms
+Run time: 44 ms
+Run time: 22 ms
+Run time: 23 ms
+Run time: 22 ms
+Run time: 44 ms
+Run time: 23 ms
+Run time: 22 ms
+Cached Person
+Run time: 35 ms
+Run time: 34 ms
+Run time: 34 ms
+Run time: 64 ms
+Run time: 35 ms
+Run time: 58 ms
+Run time: 35 ms
+Run time: 34 ms
+Run time: 34 ms
+Run time: 34 ms
+----------------------------------
+
+Create Default Total/Average: 102 / 10
+Create Paramed Total/Average: 670 / 67
+Create Person  Total/Average: 984 / 98
+
+Invoke Default Total/Average: 52 / 5
+Invoke Paramed Total/Average: 362 / 36
+Invoke Person  Total/Average: 685 / 68
+
+Cached Default Total/Average: 49 / 4
+Cached Paramed Total/Average: 269 / 26
+Cached Person  Total/Average: 397 / 39
+
+Test complete. Press any key to exit...
